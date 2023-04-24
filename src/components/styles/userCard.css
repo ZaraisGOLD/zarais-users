@@ -1,22 +1,44 @@
 :root {
-    --tf-Color: #aaa;
+    --tf-Color: #555555be;
     --ts-Color: white;
-    --b-Color: lightcoral;
+    --b-Color: rgba(226, 0, 0, 50%);
     --s-Color: #0005;
+    --bc-User: #555a884f;
+    --f-Color: #555A88;
+    --i-Color: #132078b7;
 }
 
 .user {
-    border: 0.05em solid var(--tf-Color);
+    border: 0.05em solid var(--f-Color);
     width: 100%;
     max-width: 320px;
     border-radius: 0.4em;
     padding: 1.5em 1em;
+    min-width: 250px;
+    box-shadow: 0 0 0.3em var(--f-Color);
+}
+
+.user__nameIcon {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.bx-user {
+    background-color: var(--bc-User);
+    color: var(--f-Color);
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 1.5em;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 70px;
 }
 
 .user_name {
     font-weight: 500;
     font-size: 1.1rem;
-    margin-bottom: 1em;
 }
 
 .user__list {
@@ -37,6 +59,18 @@
     text-transform: uppercase;
     position: relative;
     left: 1.5em;
+}
+
+.user__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.bx-envelope,
+.bx-gift {
+    font-size: 1.2rem;
+    color: var(--i-Color);
 }
 
 .user__value {
