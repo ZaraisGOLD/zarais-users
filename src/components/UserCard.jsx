@@ -11,7 +11,7 @@ const UserCard = ({ user, deleteUser, setUpdateInfo, setFormClose, setConfirmDel
     setMsgDelete(true)
     setTimeout(() => {
       setMsgDelete(false)
-    }, 7000);
+    }, 2000);
   }
 
   const handleUpdate = () => {
@@ -59,11 +59,11 @@ const UserCard = ({ user, deleteUser, setUpdateInfo, setFormClose, setConfirmDel
         </button>
       </footer>
       {confirmDelete && (
-        <div className='form__confirm--container' >
-          <div className='form__confirm'>
-            <p className='form__confirm--alert'>Are you sure want to delete <span className='user__confirm--alert'>{confirmDelete.first_name} {confirmDelete.last_name}</span>?
+        <div className='user__confirm--container' >
+          <div className='user__confirm'>
+            <p className='user__confirm--alert'>Are you sure want to delete <span className='user__confirm--alert'>{confirmDelete.first_name} {confirmDelete.last_name}</span>?
             </p>
-            <div className='form__confirm--icons'>
+            <div className='user__confirm--icons'>
               <i onClick={handleDeleteClose} className='bx bx-x-circle'></i>
               <i onClick={handleDelete} className='bx bx-check-circle'></i>
             </div>
@@ -72,7 +72,9 @@ const UserCard = ({ user, deleteUser, setUpdateInfo, setFormClose, setConfirmDel
       )}
       {msgDelete && (
         <div className='msg'>
-          <div className='msg__delete'>User deleted successfully</div>
+          <div className='msg__delete'>User deleted successfully
+            <img className='msg__delete--okey' src="https://upload.wikimedia.org/wikipedia/commons/5/50/Yes_Check_Circle.svg" alt="" />
+          </div>
         </div>
       )}
     </div>
