@@ -36,9 +36,12 @@
     line-height: 70px;
 }
 
-.user_name {
-    font-weight: 500;
-    font-size: 1.1rem;
+.user__name {
+    text-transform: lowercase;
+}
+
+.user__name::first-line {
+    text-transform: capitalize;
 }
 
 .user__list {
@@ -107,4 +110,29 @@
 
 .user__icon {
     font-size: 1.2rem;
+}
+
+.user__confirm--alert {
+    text-transform: lowercase;
+}
+
+.msg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    top: -200px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.msg__delete {
+    background-color: var(--f-Color);
+    color: var(--ts-Color);
+    padding: 1.5em;
+    border-radius: 1em;
+    font-weight: 500;
 }

@@ -55,7 +55,7 @@ const FormUser = ({ postUser, updateInfo, updateUser, setUpdateInfo, setFormClos
           <label className='form__label' htmlFor="password">Password
             <span className='form__label--req'> *</span>
           </label>
-          <input className='form__input' {...register('password')} type="password" id='password' placeholder='e.g: User2000*' pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$%&*_=+-]).{8,16}$" required />
+          <input className='form__input' {...register('password')} type="password" id='password' placeholder='e.g: User2000*' pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[#$%&*_=+-]).{8,16}$" required />
         </div>
         <div className='form__item'>
           <label className='form__label' htmlFor="first_name">First Name
@@ -67,7 +67,7 @@ const FormUser = ({ postUser, updateInfo, updateUser, setUpdateInfo, setFormClos
           <label className='form__label' htmlFor="last_name">Last Name
             <span className='form__label--req'> *</span>
           </label>
-          <input className='form__input' {...register('last_name')} type="text" id='last_name' placeholder='e.g: Smith' required />
+          <input className='form__input last_name' {...register('last_name')} type="text" id='last_name' placeholder='e.g: Smith' required />
         </div>
         <div className='form__item'>
           <label className='form__label' htmlFor="birthday">Birthday
