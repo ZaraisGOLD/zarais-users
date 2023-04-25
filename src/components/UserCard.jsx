@@ -11,7 +11,7 @@ const UserCard = ({ user, deleteUser, setUpdateInfo, setFormClose, setConfirmDel
     setMsgDelete(true)
     setTimeout(() => {
       setMsgDelete(false)
-    }, 5000);
+    }, 7000);
   }
 
   const handleUpdate = () => {
