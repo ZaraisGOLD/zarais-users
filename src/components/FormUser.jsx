@@ -79,7 +79,6 @@ const FormUser = ({ postUser, updateInfo, updateUser, setUpdateInfo, setFormClos
         <p className='form__req'>
           <span className='form__req--sym'> *</span>All fields are required
         </p>
-      </form>
       {confirm && (
         <div className='form__confirm--container' >
           <div className='form__confirm'>
@@ -91,6 +90,7 @@ const FormUser = ({ postUser, updateInfo, updateUser, setUpdateInfo, setFormClos
           </div>
         </div>
       )}
+      </form>
     </div>
   )
 }

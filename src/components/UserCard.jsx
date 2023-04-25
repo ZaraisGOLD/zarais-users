@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './styles/userCard.css'
 
 const UserCard = ({ user, deleteUser, setUpdateInfo, setFormClose, setConfirmDelete, confirmDelete }) => {
 
+  useEffect(() => {
+    confirmDelete
+  }, [])
+
+
   const handleDelete = () => {
-    deleteUser(user.id)
+    deleteUser(confirmDelete.id)
     setConfirmDelete(false)
   }
 
@@ -15,7 +20,7 @@ const UserCard = ({ user, deleteUser, setUpdateInfo, setFormClose, setConfirmDel
 
   const handleConfirmDelete = (e) => {
     e.preventDefault()
-    setConfirmDelete(true)
+    setConfirmDelete(user)
   }
 
   const handleDeleteClose = () => {
@@ -55,7 +60,7 @@ const UserCard = ({ user, deleteUser, setUpdateInfo, setFormClose, setConfirmDel
       {confirmDelete && (
         <div className='form__confirm--container' >
           <div className='form__confirm'>
-            <p className='form__confirm--alert'>Are you sure want to delete?</p>
+            <p className='form__confirm--alert'>Are you sure want to delete {confirmDelete.first_name} {confirmDelete.last_name}?</p>
             <div className='form__confirm--icons'>
               <i onClick={handleDeleteClose} className='bx bx-x-circle'></i>
               <i onClick={handleDelete} className='bx bx-check-circle'></i>
