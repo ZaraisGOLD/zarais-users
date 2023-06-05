@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import defaultValues from '../utils/defaultValues'
 import './styles/formUser.css'
 
 const FormUser = ({ postUser, updateInfo, updateUser, setUpdateInfo, setFormClose, formClose, setConfirm, confirm }) => {
-
+  
   const { register, handleSubmit, reset } = useForm()
 
   useEffect(() => {
@@ -79,6 +79,7 @@ const FormUser = ({ postUser, updateInfo, updateUser, setUpdateInfo, setFormClos
         <p className='form__req'>
           <span className='form__req--sym'> *</span>All fields are required
         </p>
+      </form>
       {confirm && (
         <div className='form__confirm--container' >
           <div className='form__confirm'>
@@ -90,7 +91,13 @@ const FormUser = ({ postUser, updateInfo, updateUser, setUpdateInfo, setFormClos
           </div>
         </div>
       )}
-      </form>
+      {/* {msg && (
+        <div className='form__msg'>
+          <div className='form__msg--CU'>User {updateInfo ? 'updated' : 'created'} successfully
+            <img className='form__msg--okey' src="https://upload.wikimedia.org/wikipedia/commons/5/50/Yes_Check_Circle.svg" alt="" />
+          </div>
+        </div>
+      )} */}
     </div>
   )
 }
