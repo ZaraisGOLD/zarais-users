@@ -32,7 +32,7 @@ const useUserCrud = () => {
 
         const urlUpdate = `${url}/users/${id}`
 
-        axios.patch(urlUpdate, data)
+        axios.put(urlUpdate, data)
             .then(() => getAlUsers())
             .catch(err => console.log(err))
     }
